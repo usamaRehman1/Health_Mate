@@ -1,20 +1,7 @@
 import axios from "axios";
 
-const configuredBaseURL = import.meta.env.VITE_API_BASE_URL
-    || "https://ridden-crispness-wish.ngrok-free.dev/api";
-
-
-// api for ngrok
-// const api = axios.create({
-//     baseURL: configuredBaseURL.trim().replace(/\/+$/, ""),
-//     headers: {
-//         "Content-Type": "application/json",
-//         "ngrok-skip-browser-warning": "69420",
-//     },
-// });
-
 const api = axios.create({
-    baseURL: configuredBaseURL?.trim().replace(/\/+$/, ""),
+    baseURL: "/api",
     headers: {
         "Content-Type": "application/json",
     },
