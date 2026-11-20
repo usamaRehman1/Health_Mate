@@ -5,7 +5,6 @@ import routers from "./src/routes/index.js";
 import { config } from "dotenv";
 import cors from "cors";
 config()
-connectDB();
 
 const app = express();
 app.use(cors());
@@ -18,6 +17,7 @@ app.get("/api/health", (req, res) => {
         message: "healthMate project working properly",
     })
 })
+connectDB();
 
 // const PORT = ENV.PORT || 3000;
 // app.listen(PORT, () => {
